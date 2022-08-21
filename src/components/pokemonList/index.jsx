@@ -20,14 +20,15 @@ export const PokemonList = () => {
 
       <ul style={{ listStyleType: "none" }}>
         {apiData.map((pokemon, index) => (
-          <li key={index}>{`${
-            index.toString().length < apiData.length.toString().length &&
-            "0".repeat(
-              apiData.length.toString().length - index.toString().length
-            )
-          }${index + 1}: ${
-            pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
-          }`}</li>
+          <li key={index}>
+            {(index + 1).toString().length < apiData.length.toString().length &&
+              "0".repeat(
+                apiData.length.toString().length - index.toString().length
+              )}
+            {index + 1}
+            {": "}
+            {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+          </li>
         ))}
       </ul>
     </>
