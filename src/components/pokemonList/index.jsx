@@ -10,7 +10,7 @@ export const PokemonList = () => {
       .then((e) => setApiData(e.results));
   }, []);
 
-  console.log(apiData);
+  console.log((10).toString().length);
 
   return (
     <>
@@ -23,7 +23,7 @@ export const PokemonList = () => {
           <li key={index}>
             {(index + 1).toString().length < apiData.length.toString().length &&
               "0".repeat(
-                apiData.length.toString().length - index.toString().length
+                apiData.length.toString().length - (index + 1).toString().length
               )}
             {index + 1}
             {": "}
