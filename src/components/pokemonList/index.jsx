@@ -10,8 +10,6 @@ export const PokemonList = () => {
       .then((e) => setApiData(e.results));
   }, []);
 
-  console.log((10).toString().length);
-
   return (
     <>
       <h1>Pokemon List</h1>
